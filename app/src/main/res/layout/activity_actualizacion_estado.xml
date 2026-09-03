@@ -1,10 +1,273 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Actualizacion_estado">
+    android:background="@color/fondo_pantalla">
+
+
+    <!-- ENCABEZADO -->
+
+
+    <LinearLayout
+        android:id="@+id/layoutEncabezado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnRegresar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/negro" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="14dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Actualizar estado"
+                android:textColor="@color/negro"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtNumeroIncidente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#INC-2026-000123"
+                android:textColor="@color/gris_texto"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- ================================================= -->
+    <!-- CONTENIDO -->
+    <!-- ================================================= -->
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollContenido"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/layoutEncabezado"
+        app:layout_constraintBottom_toTopOf="@id/layoutInferior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="20dp">
+
+
+            <!-- ========================================= -->
+            <!-- ESTADO ACTUAL -->
+            <!-- ========================================= -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/tarjetaEstadoActual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/blanco"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/borde_tarjeta"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="14dp"
+                        android:paddingTop="12dp"
+                        android:paddingEnd="14dp"
+                        android:paddingBottom="10dp"
+                        android:text="⌁ Estado actual"
+                        android:textColor="@color/morado_principal"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/fondo_pantalla" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="14dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="14dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Registrado como"
+                            android:textColor="@color/gris_texto"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtEstadoActual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/fondo_estado_actual"
+                            android:paddingStart="8dp"
+                            android:paddingTop="5dp"
+                            android:paddingEnd="8dp"
+                            android:paddingBottom="5dp"
+                            android:text="En evaluación"
+                            android:textColor="#C69A00"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- SELECCIONAR ESTADO -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/tarjetaSeleccionEstados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/blanco"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/morado_principal"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="14dp"
+                        android:paddingTop="12dp"
+                        android:paddingEnd="14dp"
+                        android:paddingBottom="8dp"
+                        android:text="✓ Seleccionar nuevo estado"
+                        android:textColor="@color/morado_principal"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerEstados"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        android:overScrollMode="never" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- OBSERVACIÓN -->
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="⌾ Observación (opcional)"
+                android:textColor="@color/morado_principal"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutObservacion"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:boxBackgroundColor="@color/blanco"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxStrokeColor="@color/borde_tarjeta"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtObservacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="top|start"
+                    android:hint="Describe el motivo del cambio de estado"
+                    android:inputType="textMultiLine"
+                    android:padding="14dp"
+                    android:textSize="12sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- BOTÓN INFERIOR -->
+
+
+    <LinearLayout
+        android:id="@+id/layoutInferior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blanco"
+        android:paddingStart="20dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnActualizarEstado"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Actualizar estado"
+            android:textAllCaps="false"
+            android:textColor="@color/blanco"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/morado_principal"
+            app:cornerRadius="10dp"
+            app:elevation="0dp" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
