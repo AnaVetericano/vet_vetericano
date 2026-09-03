@@ -2,20 +2,33 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="blue">#0000A5</color>
     <color name="morado_principal">#4845B8</color>
-    <color name="morado_claro">#E8E6FA</color>
-    <color name="estado_seleccionado">#E8E6FA</color>
-    <color name="fondo_pantalla">#F4F5F8</color>
-    <color name="blanco">#FFFFFF</color>
-    <color name="negro">#222222</color>
-    <color name="gris_texto">#9E9E9E</color>
-    <color name="borde_tarjeta">#D7DCE8</color>
-    <color name="status_azul">#4545B8</color>
-    <color name="status_amarillo">#FFD12A</color>
-    <color name="status_azul_claro">#7DB8E6</color>
-    <color name="status_verde">#16B88A</color>
-    <color name="status_rojo">#F04444</color>
-    <color name="status_gris">#C9C9C9</color>
 
+    <color name="morado_claro">#E8E6FA</color>
+
+    <color name="estado_seleccionado">#E8E6FA</color>
+
+    <color name="fondo_pantalla">#F4F5F8</color>
+
+    <color name="blanco">#FFFFFF</color>
+
+    <color name="negro">#222222</color>
+
+    <color name="gris_texto">#9E9E9E</color>
+
+    <color name="borde_tarjeta">#D7DCE8</color>
+
+    <color name="status_azul">#4545B8</color>
+
+    <color name="status_amarillo">#FFD12A</color>
+
+    <color name="status_azul_claro">#7DB8E6</color>
+
+    <color name="status_verde">#16B88A</color>
+
+    <color name="status_rojo">#F04444</color>
+
+    <color name="status_gris">#C9C9C9</color>
 
 </resources>
