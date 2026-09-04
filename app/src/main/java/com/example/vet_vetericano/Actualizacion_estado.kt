@@ -22,10 +22,10 @@ class Actualizacion_estado : AppCompatActivity() {
         setupRecyclerView()
 
         // Botón actualizar estado
-        binding.btnUpdateStatus.setOnClickListener {
+        binding.btnActualizarEstado.setOnClickListener {
 
             val observation =
-                binding.etObservation.text.toString().trim()
+                binding.edtObservacion.text.toString().trim()
 
             if (selectedStatusId != null) {
 
@@ -46,7 +46,7 @@ class Actualizacion_estado : AppCompatActivity() {
         }
 
         // Botón regresar
-        binding.btnBack.setOnClickListener {
+        binding.btnRegresar.setOnClickListener {
             finish()
         }
     }
@@ -55,52 +55,52 @@ class Actualizacion_estado : AppCompatActivity() {
 
         val statuses = listOf(
 
-            StatusItem(
+            Estado(
                 1,
                 "En evaluación",
-                R.color.status_blue
+                R.color.status_azul
             ),
 
-            StatusItem(
+            Estado(
                 2,
                 "En tratamiento",
-                R.color.status_yellow
+                R.color.status_amarillo
             ),
 
-            StatusItem(
+            Estado(
                 3,
                 "En observación",
-                R.color.status_light_blue
+                R.color.status_azul_claro
             ),
 
-            StatusItem(
+            Estado(
                 4,
                 "Alta médica",
-                R.color.status_green
+                R.color.status_verde
             ),
 
-            StatusItem(
+            Estado(
                 5,
                 "Fallecido",
-                R.color.status_red
+                R.color.status_rojo
             ),
 
-            StatusItem(
+            Estado(
                 6,
                 "Transferido a otro centro",
-                R.color.status_grey
+                R.color.status_gris
             )
         )
 
-        val adapter = StatusAdapter(statuses) { selectedItem ->
+        val adapter = AdaptadorEstado(statuses) { selectedItem ->
 
             selectedStatusId = selectedItem.id
 
         }
 
-        binding.rvStatuses.layoutManager =
+        binding.recyclerEstados.layoutManager =
             LinearLayoutManager(this)
 
-        binding.rvStatuses.adapter = adapter
+        binding.recyclerEstados.adapter = adapter
     }
 }

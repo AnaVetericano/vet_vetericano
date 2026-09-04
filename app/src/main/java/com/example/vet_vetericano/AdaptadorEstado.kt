@@ -11,7 +11,7 @@ class AdaptadorEstado(
     private val alSeleccionar: (Estado) -> Unit
 ) : RecyclerView.Adapter<AdaptadorEstado.VistaEstado>() {
 
-    private var posicionSeleccionada = -1
+    private var posicionSeleccionada = 1
 
     inner class VistaEstado(
         val binding: ItemEstadoBinding
