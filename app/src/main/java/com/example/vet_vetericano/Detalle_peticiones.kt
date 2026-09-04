@@ -18,7 +18,7 @@ class Detalle_peticiones : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        binding.
+
 
 
 
