@@ -37,7 +37,7 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Inicio_bienvenid"
-            android:exported="false"
+            android:exported="true"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Detalle_peticiones"

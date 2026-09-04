@@ -22,6 +22,5 @@ class Detalle_peticiones : AppCompatActivity() {
 
 
 
-
     }
 }
