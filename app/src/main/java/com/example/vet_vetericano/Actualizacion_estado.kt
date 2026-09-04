@@ -102,5 +102,11 @@ class Actualizacion_estado : AppCompatActivity() {
             LinearLayoutManager(this)
 
         binding.recyclerEstados.adapter = adapter
+        Toast.makeText(
+            this,
+            "Estados: ${statuses.size}",
+            Toast.LENGTH_LONG
+        ).show()
+
     }
 }
