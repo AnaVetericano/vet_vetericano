@@ -3,12 +3,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:background="@color/fondo_pantalla">
-
-
-    <!-- ENCABEZADO -->
 
 
     <LinearLayout
@@ -28,7 +27,7 @@
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:padding="4dp"
-            android:src="@drawable/ic_arrow_back"
+
             app:tint="@color/negro" />
 
         <LinearLayout
@@ -60,9 +59,6 @@
     </LinearLayout>
 
 
-    <!-- ================================================= -->
-    <!-- CONTENIDO -->
-    <!-- ================================================= -->
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollContenido"
@@ -140,7 +136,7 @@
                             android:id="@+id/txtEstadoActual"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/fondo_estado_actual"
+                            android:background=""
                             android:paddingStart="8dp"
                             android:paddingTop="5dp"
                             android:paddingEnd="8dp"
@@ -190,8 +186,10 @@
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recyclerEstados"
+                        tools:listitem="@layout/item_estado"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+
                         android:nestedScrollingEnabled="false"
                         android:overScrollMode="never" />
 
@@ -199,7 +197,6 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- OBSERVACIÓN -->
 
 
             <TextView
@@ -240,9 +237,6 @@
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
-
-    <!-- BOTÓN INFERIOR -->
-
 
     <LinearLayout
         android:id="@+id/layoutInferior"
