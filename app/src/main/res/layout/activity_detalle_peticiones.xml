@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4F4F7">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#F4F4F7"
+    tools:context=".Detalle_peticiones">
 
     <!-- CONTENIDO PRINCIPAL -->
     <LinearLayout
@@ -36,9 +38,9 @@
                     android:layout_height="40dp"
                     android:background="@android:color/transparent"
                     android:contentDescription="Volver"
+                    android:scaleType="fitCenter"
                     android:padding="7dp"
-                    android:src="@drawable/boton_volver"
-                    app:tint="#151515" />
+                    android:src="@drawable/backarrow" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -107,7 +109,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/bg_contenedor_principal"
                     android:orientation="vertical"
                     android:paddingStart="25dp"
                     android:paddingTop="10dp"
@@ -145,7 +146,7 @@
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
                                     android:contentDescription="Solicitante"
-                                    android:src="@drawable/ic_person_outline_24"
+                                    android:src="@drawable/iconuser"
                                     app:tint="#4A46A7" />
 
                                 <TextView
@@ -351,7 +352,7 @@
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
                                     android:contentDescription="Animal"
-                                    android:src="@drawable/ic_pets_24"
+                                    android:src="@drawable/pawdog"
                                     app:tint="#4A46A7" />
 
                                 <TextView
@@ -515,7 +516,7 @@
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
                                     android:contentDescription="Observaciones"
-                                    android:src="@drawable/ic_chat_bubble_outline_24"
+                                    android:src="@drawable/iconadhesivenote"
                                     app:tint="#4A46A7" />
 
                                 <TextView
@@ -586,7 +587,7 @@
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
                                     android:contentDescription="Ubicación"
-                                    android:src="@drawable/ic_location_on_24"
+                                    android:src="@drawable/locationicon"
                                     app:tint="#4A46A7" />
 
                                 <TextView
@@ -618,8 +619,8 @@
                                     android:layout_gravity="center_horizontal"
                                     android:layout_marginTop="20dp"
                                     android:contentDescription="Mapa"
-                                    android:src="@drawable/ic_map_location_24"
-                                    app:tint="#4A46A7" />
+                                    android:src="@drawable/iconmaps"
+                                    app:tint="@color/bluegeneral" />
 
                                 <TextView
                                     android:id="@+id/tvDireccionMapa"
